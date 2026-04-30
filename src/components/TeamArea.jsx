@@ -14,18 +14,23 @@ function TeamArea() {
 
         <div className="row">
           {teamMembers.map((membro, idx) => (
-            <div className="col-md-3 col-sm-6 mb-4 d-flex justify-content-center" key={idx}>
+            <div
+              className="col-md-3 col-sm-6 mb-4 d-flex justify-content-center"
+              key={idx}
+            >
               <div className="card team-card">
-                <img src={membro.img} className="card-img-top" alt={membro.nome} />
+                <img
+                  src={membro.img}
+                  className="card-img-top"
+                  alt={membro.nome}
+                />
                 <div className="card-body text-center">
                   <h5 className="card-title">{membro.nome}</h5>
                   <p className="card-text">{membro.cargo}</p>
                   <button
                     className="main-btn"
                     onClick={() =>
-                      window.open(
-                        "https://api.whatsapp.com/message/MOKDM5R4TVAKK1?autoload=1&app_absent=0"
-                      )
+                      window.open(`https://wa.me/55${membro.fone}`, "_blank")
                     }
                   >
                     Conversar
