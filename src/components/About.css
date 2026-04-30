@@ -1,0 +1,28 @@
+#about-area {
+  background-color: #f9f9f9;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00a447;
+}
+
+.about-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#about-list li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.about-icon {
+  color: #00a447;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}

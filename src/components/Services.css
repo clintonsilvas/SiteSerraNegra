@@ -1,0 +1,35 @@
+#services-area {
+  background-color: #fff;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00a447;
+}
+
+.service-box {
+  border-radius: 15px;
+  background: #f8f8f8;
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  background: #00a447;
+  color: #fff;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #00a447;
+  transition: 0.3s;
+}
+
+.service-box:hover .service-icon {
+  color: #fff;
+}
+
+.service-box h4 {
+  margin-top: 10px;
+  font-weight: 600;
+}

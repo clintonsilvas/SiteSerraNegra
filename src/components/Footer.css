@@ -1,0 +1,34 @@
+#footer-area {
+  font-size: 0.9rem;
+}
+
+#footer-area h5 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#footer-area a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#footer-area a:hover {
+  color: #00a447;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00a447;
+}
+
+@media (max-width: 576px) {
+  #footer-area .text-md-left {
+    text-align: center !important;
+  }
+}
