@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa6";
 import { BsBricks } from "react-icons/bs";
 import "./Services.css";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   {
@@ -44,25 +45,31 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services-area" className="py-5">
-      <div className="container">
-        <div className="row mb-4">
-          <div className="col-12 text-center">
-            <h3 className="main-title">Nossos Produtos</h3>
+    <>
+      <Helmet>
+        <title>Nossos serviços - Serra Negra Materiais</title>
+        <meta name="description" content="produtos e serviços" />
+      </Helmet>
+      <section id="services-area" className="py-5">
+        <div className="container">
+          <div className="row mb-4">
+            <div className="col-12 text-center">
+              <h3 className="main-title">Nossos Produtos</h3>
+            </div>
+          </div>
+          <div className="row">
+            {services.map((item, idx) => (
+              <div className="col-md-4 mb-4" key={idx}>
+                <div className="service-box text-center p-4 shadow-sm h-100">
+                  <div className="service-icon mb-3">{item.icon}</div>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="row">
-          {services.map((item, idx) => (
-            <div className="col-md-4 mb-4" key={idx}>
-              <div className="service-box text-center p-4 shadow-sm h-100">
-                <div className="service-icon mb-3">{item.icon}</div>
-                <h4>{item.title}</h4>
-                <p>{item.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

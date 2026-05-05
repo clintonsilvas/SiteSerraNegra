@@ -7,10 +7,19 @@ import TeamArea from "../components/TeamArea";
 import NewsArea from "../components/NewsArea";
 import CallArea from "../components/CallArea";
 import ContactArea from "../components/ContactArea";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Serra Negra Materiais para Construção</title>
+        <meta
+          name="description"
+          content="Loja de materiais de construção em Alterosa "
+        />
+      </Helmet>
+
       <Slider />
       <About />
       <Services />
