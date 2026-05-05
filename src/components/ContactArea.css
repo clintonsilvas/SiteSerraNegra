@@ -1,0 +1,76 @@
+/* Área de Contato */
+#contact-area {
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  padding: 80px 0;
+}
+
+/* Boxes */
+.contact-box {
+  padding: 30px 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.contact-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 164, 71, 0.15);
+}
+
+/* Ícones */
+.contact-box i {
+  font-size: 40px;
+  color: #00a447;
+  margin-bottom: 15px;
+}
+
+/* Textos */
+.contact-box p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.contact-tile {
+  font-weight: bold;
+  color: #444;
+}
+
+/* Links */
+.contact-box a {
+  color: #00a447;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.contact-box a:hover {
+  color: #007a34;
+  text-decoration: underline;
+}
+
+/* Título (melhoria leve no seu) */
+#contact-area .main-title {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+#contact-area .main-title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #00a447;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contact-box {
+    margin-bottom: 20px;
+  }
+}

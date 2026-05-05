@@ -102,4 +102,5 @@ npm install react-icons
 npm install react-bootstrap bootstrap
 npm install react-circular-progressbar
 npm install react-intersection-observer
+npm install react-router-dom
 npm run dev
