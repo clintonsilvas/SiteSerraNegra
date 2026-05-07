@@ -26,6 +26,9 @@
 .social-icons a:hover {
   color: #00a447;
 }
+.list-unstyled a{
+  font-size: 1.2  em;
+}
 
 @media (max-width: 576px) {
   #footer-area .text-md-left {

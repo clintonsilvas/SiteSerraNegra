@@ -36,11 +36,22 @@ function TeamArea({ seo = false }) {
                 key={idx}
               >
                 <div className="card team-card">
-                  <img
-                    src={membro.img}
-                    className="card-img-top"
-                    alt={membro.nome}
-                  />
+                  <div className="team-image-wrapper">
+                    <img
+                      src={membro.img}
+                      className="card-img-top"
+                      alt={membro.nome}
+                      loading="lazy"
+                    />
+
+                    <img
+                      src="/logo.svg"
+                      alt="Logo Serra Negra"
+                      className="team-logo"
+                      loading="lazy"
+                    />
+                  </div>
+
                   <div className="card-body text-center">
                     <h5 className="card-title">{membro.nome}</h5>
                     <p className="card-text">{membro.cargo}</p>

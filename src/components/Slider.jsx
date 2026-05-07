@@ -19,6 +19,9 @@ export default function Slider() {
               src={hero}
               alt="Fachada da empresa"
               fetchPriority="high"
+              width="1920"
+              height="700"
+              decoding="async"
             />
           </div>
           <Carousel.Caption>
@@ -39,6 +42,9 @@ export default function Slider() {
               src={func}
               alt="Nosso Time"
               fetchPriority="high"
+              width="1920"
+              height="700"
+              decoding="async"
             />
           </div>
           <Carousel.Caption>
@@ -56,6 +62,9 @@ export default function Slider() {
               src={frente}
               alt="Nossa fabrica"
               fetchPriority="high"
+              width="1920"
+              height="700"
+              decoding="async"
             />
           </div>
           <Carousel.Caption>
