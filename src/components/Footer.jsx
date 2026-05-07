@@ -25,22 +25,22 @@ export default function Footer() {
             <h5>Links Rápidos</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#about-area">Sobre Nós</a>
+                <a href="/sobre">Sobre Nós</a>
               </li>
               <li>
-                <a href="#services-area">Produtos</a>
+                <a href="/servicos">Produtos</a>
               </li>
               <li>
-                <a href="#data-area">Dados</a>
+                <a href="/dados">Dados</a>
               </li>
               <li>
-                <a href="#team-area">Time</a>
+                <a href="/time">Time</a>
               </li>
               <li>
-                <a href="#news-area">Onde Estamos</a>
+                <a href="/contato">Onde Estamos</a>
               </li>
               <li>
-                <a href="#call-area">Orçamento</a>
+                <a href="/contato">Orçamento</a>
               </li>
             </ul>
           </div>
