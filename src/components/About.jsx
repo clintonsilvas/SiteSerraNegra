@@ -1,5 +1,5 @@
 import React from "react";
-import funcImg from "../assets/img/func.jpeg";
+import funcImg from "../assets/img/func.webp";
 import { FaCheckCircle } from "react-icons/fa";
 import "./About.css";
 import { Helmet } from "react-helmet-async";

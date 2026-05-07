@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel, Container } from "react-bootstrap";
-import hero from "../assets/img/hero.jpg";
-import frente from "../assets/img/fabrica.jpg";
-import func from "../assets/img/func.jpeg";
+import hero from "../assets/img/hero.webp";
+import frente from "../assets/img/fabrica.webp";
+import func from "../assets/img/func.webp";
 import "./Slider.css";
 
 export default function Slider() {
@@ -18,6 +18,7 @@ export default function Slider() {
               className="d-block w-100"
               src={hero}
               alt="Fachada da empresa"
+              fetchPriority="high"
             />
           </div>
           <Carousel.Caption>
@@ -36,7 +37,8 @@ export default function Slider() {
             <img
               className="d-block w-100"
               src={func}
-              alt="Fachada da empresa"
+              alt="Nosso Time"
+              fetchPriority="high"
             />
           </div>
           <Carousel.Caption>
@@ -52,7 +54,8 @@ export default function Slider() {
             <img
               className="d-block w-100"
               src={frente}
-              alt="Funcionários da empresa"
+              alt="Nossa fabrica"
+              fetchPriority="high"
             />
           </div>
           <Carousel.Caption>
