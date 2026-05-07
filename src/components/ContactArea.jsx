@@ -13,7 +13,6 @@ export default function ContactArea({ seo = false }) {
             name="description"
             content="Entre em contato com a Serra Negra Materiais em Alterosa-MG. Confira telefone, endereço, horários e atendimento especializado."
           />
-
           <link rel="canonical" href="https://serranegramc.com.br/contato" />
           <meta
             name="keywords"
