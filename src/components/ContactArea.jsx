@@ -2,13 +2,26 @@ import React from "react";
 import "./ContactArea.css";
 import { Helmet } from "react-helmet-async";
 
-export default function ContactArea() {
+export default function ContactArea({ seo = false }) {
   return (
     <>
-      <Helmet>
-        <title>Entre em contato - Serra Negra Materiais</title>
-        <meta name="description" content="telefone e email" />
-      </Helmet>
+      {seo && (
+        <Helmet>
+          <title>Entre em contato - Serra Negra Materiais</title>
+
+          <meta
+            name="description"
+            content="Entre em contato com a Serra Negra Materiais em Alterosa-MG. Confira telefone, endereço, horários e atendimento especializado."
+          />
+
+          <link rel="canonical" href="https://serranegramc.com.br/contato" />
+          <meta
+            name="keywords"
+            content="materiais de construção, loja de construção, cimento, areia, tijolo, Alterosa MG, Serra Negra Materiais"
+          />
+        </Helmet>
+      )}
+
       <section id="contact-area">
         <div className="container">
           <div className="row text-center">

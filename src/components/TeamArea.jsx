@@ -3,13 +3,23 @@ import { teamMembers } from "../data/teamImages";
 import "./TeamArea.css";
 import { Helmet } from "react-helmet-async";
 
-function TeamArea() {
+function TeamArea({ seo = false }) {
   return (
     <>
-      <Helmet>
-        <title>Nosso time - Serra Negra Materiais</title>
-        <meta name="description" content="time de vendedores" />
-      </Helmet>
+      {seo && (
+        <Helmet>
+          <title>Nosso time - Serra Negra Materiais</title>
+          <meta
+            name="description"
+            content="Conheça nossa equipe de vendedores e profissionais preparados para oferecer atendimento de qualidade e ajudar em sua construção."
+          />
+          <link rel="canonical" href="https://serranegramc.com.br/time" />
+          <meta
+            name="keywords"
+            content="materiais de construção, loja de construção, cimento, areia, tijolo, Alterosa MG, Serra Negra Materiais"
+          />
+        </Helmet>
+      )}
 
       <section id="team-area" className="py-5">
         <div className="container">

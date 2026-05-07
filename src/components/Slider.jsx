@@ -8,6 +8,9 @@ import "./Slider.css";
 export default function Slider() {
   return (
     <Container fluid className="p-0">
+      <h1 style={{ display: "none" }}>
+        Serra Negra Materiais para Construção Alterosa
+      </h1>
       <Carousel fade controls indicators>
         <Carousel.Item>
           <div className="carousel-overlay">
@@ -20,7 +23,8 @@ export default function Slider() {
           <Carousel.Caption>
             <h2>Quer construir sua casa?</h2>
             <p>
-              Conte conosco, temos mais de 34 anos de mercado para te ajudar.
+              Conte conosco, temos mais de {new Date().getFullYear() - 1990}{" "}
+              anos de mercado para te ajudar.
             </p>
             <a href="#team-area" className="main-btn">
               Contate-nos

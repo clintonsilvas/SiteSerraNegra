@@ -5,14 +5,16 @@ import "./DataArea.css";
 import { useInView } from "react-intersection-observer";
 import { Helmet } from "react-helmet-async";
 
+const idade = new Date().getFullYear() - 1990;
+
 const items = [
   { value: 8367, label: "Clientes felizes" },
   { value: 14523, label: "Produtos cadastrados" },
   { value: 29, label: "Colaboradores" },
-  { value: 36, label: "Anos de mercado" },
+  { value: idade, label: "Anos de mercado" },
 ];
 
-export default function DataArea() {
+export default function DataArea({ seo = false }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
   const [progress, setProgress] = useState(items.map(() => 0));
 
@@ -40,10 +42,21 @@ export default function DataArea() {
 
   return (
     <>
-      <Helmet>
-        <title>Nosso dados - Serra Negra Materiais</title>
-        <meta name="description" content="números provam nosso valor" />
-      </Helmet>
+      {seo && (
+        <Helmet>
+          <title>Nosso dados - Serra Negra Materiais</title>
+          <meta
+            name="description"
+            content="Confira os números e resultados que demonstram a confiança, experiência e qualidade da Serra Negra Materiais em Alterosa-MG."
+          />
+          <link rel="canonical" href="https://serranegramc.com.br/dados" />
+          <meta
+            name="keywords"
+            content="materiais de construção, loja de construção, cimento, areia, tijolo, Alterosa MG, Serra Negra Materiais"
+          />
+        </Helmet>
+      )}
+
       <section id="data-area" className="py-5" ref={ref}>
         <div className="container">
           <div className="col-12 text-center mb-4">

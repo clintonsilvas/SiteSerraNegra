@@ -43,13 +43,21 @@ const services = [
   },
 ];
 
-export default function Services() {
+export default function Services({ seo = false }) {
   return (
     <>
-      <Helmet>
-        <title>Nossos serviços - Serra Negra Materiais</title>
-        <meta name="description" content="produtos e serviços" />
-      </Helmet>
+      {seo && (
+        <Helmet>
+          <title>Nossos serviços - Serra Negra Materiais</title>
+          <meta name="description" content="produtos e serviços" />
+          <link rel="canonical" href="https://serranegramc.com.br/servicos" />
+          <meta
+            name="keywords"
+            content="materiais de construção, loja de construção, cimento, areia, tijolo, Alterosa MG, Serra Negra Materiais"
+          />
+        </Helmet>
+      )}
+
       <section id="services-area" className="py-5">
         <div className="container">
           <div className="row mb-4">

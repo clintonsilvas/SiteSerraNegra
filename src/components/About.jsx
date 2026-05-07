@@ -4,13 +4,24 @@ import { FaCheckCircle } from "react-icons/fa";
 import "./About.css";
 import { Helmet } from "react-helmet-async";
 
-export default function About() {
+export default function About({ seo = false }) {
   return (
     <>
-      <Helmet>
-        <title>Sobre nós - Serra Negra Materiais</title>
-        <meta name="description" content="Nossa História" />
-      </Helmet>
+      {seo && (
+        <Helmet>
+          <title>Sobre nós - Serra Negra Materiais</title>
+          <meta
+            name="description"
+            content="Conheça a história da Serra Negra Materiais, empresa de Alterosa-MG dedicada a oferecer qualidade, confiança e ótimo atendimento."
+          />
+          <link rel="canonical" href="https://serranegramc.com.br/sobre" />
+          <meta
+            name="keywords"
+            content="materiais de construção, loja de construção, cimento, areia, tijolo, Alterosa MG, Serra Negra Materiais"
+          />
+        </Helmet>
+      )}
+
       <section id="about-area" className="py-5">
         <div className="container">
           <div className="row mb-4">
@@ -28,7 +39,8 @@ export default function About() {
             </div>
             <div className="col-md-6">
               <h3 className="about-title mb-3">
-                Há mais de 34 anos no mercado da construção civil
+                Há mais de {new Date().getFullYear() - 1990} anos no mercado da
+                construção civil
               </h3>
               <p>
                 Sempre trabalhando com ética e buscando entregar o melhor a seus

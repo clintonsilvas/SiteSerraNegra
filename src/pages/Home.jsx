@@ -9,16 +9,23 @@ import CallArea from "../components/CallArea";
 import ContactArea from "../components/ContactArea";
 import { Helmet } from "react-helmet-async";
 
-export default function Home() {
+export default function Home({ seo = false }) {
   return (
     <>
-      <Helmet>
-        <title>Serra Negra Materiais para Construção</title>
-        <meta
-          name="description"
-          content="Loja de materiais de construção em Alterosa "
-        />
-      </Helmet>
+      {seo && (
+        <Helmet>
+          <title>Serra Negra Materiais para Construção</title>
+          <meta
+            name="description"
+            content="A Serra Negra Materiais para Construção oferece materiais de construção em Alterosa-MG com qualidade, ótimo atendimento, entrega rápida, preços competitivos e condições facilitadas de pagamento."
+          />
+          <link rel="canonical" href="https://serranegramc.com.br/" />
+          <meta
+            name="keywords"
+            content="materiais de construção, loja de construção, cimento, areia, tijolo, Alterosa MG, Serra Negra Materiais"
+          />
+        </Helmet>
+      )}
 
       <Slider />
       <About />
