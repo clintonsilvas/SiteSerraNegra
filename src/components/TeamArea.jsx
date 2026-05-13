@@ -8,7 +8,9 @@ function TeamArea({ seo = false }) {
     <>
       {seo && (
         <Helmet>
-          <title>Nosso time - Serra Negra Materiais</title>
+          <title>
+            Nosso time - Serra Negra Materiais para Construção Alterosa - MG
+          </title>
           <meta
             name="description"
             content="Conheça nossa equipe de vendedores e profissionais preparados para oferecer atendimento de qualidade e ajudar em sua construção."

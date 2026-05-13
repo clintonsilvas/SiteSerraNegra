@@ -44,7 +44,9 @@ export default function DataArea({ seo = false }) {
     <>
       {seo && (
         <Helmet>
-          <title>Nosso dados - Serra Negra Materiais</title>
+          <title>
+            Nossos dados - Serra Negra Materiais para Construção Alterosa - MG
+          </title>
           <meta
             name="description"
             content="Confira os números e resultados que demonstram a confiança, experiência e qualidade da Serra Negra Materiais em Alterosa-MG."

@@ -48,10 +48,13 @@ export default function Services({ seo = false }) {
     <>
       {seo && (
         <Helmet>
-          <title>Nossos serviços - Serra Negra Materiais</title>
+          <title>
+            Nossos serviços - Serra Negra Materiais para Construção Alterosa -
+            MG
+          </title>
           <meta
             name="description"
-            content="Conheça nossos produtos e serviços com qualidade, confiança e ótimo atendimento. Trabalhamos com materiais, soluções completas e atendimento especializado para melhor atender você."
+            content="Conheça nossos produtos e serviços com qualidade, confiança e ótimo atendimento. Trabalhamos com materiais, soluções completas e atendimento especializado para melhor atender"
           />
           <link rel="canonical" href="https://serranegramc.com.br/servicos" />
           <meta

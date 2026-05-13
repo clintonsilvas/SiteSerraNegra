@@ -9,7 +9,9 @@ export default function About({ seo = false }) {
     <>
       {seo && (
         <Helmet>
-          <title>Sobre nós - Serra Negra Materiais</title>
+          <title>
+            Sobre nós - Serra Negra Materiais para Construção Alterosa - MG{" "}
+          </title>
           <meta
             name="description"
             content="Conheça a história da Serra Negra Materiais, empresa de Alterosa-MG dedicada a oferecer qualidade, confiança e ótimo atendimento."
@@ -17,7 +19,7 @@ export default function About({ seo = false }) {
           <link rel="canonical" href="https://serranegramc.com.br/sobre" />
           <meta
             name="keywords"
-            content="materiais de construção, loja de construção, cimento, areia, tijolo, Alterosa MG, Serra Negra Materiais"
+            content="materiais de construção, quando, onde, fundadores, , cimento, areia, tijolo, Alterosa MG, Serra Negra Materiais"
           />
         </Helmet>
       )}
