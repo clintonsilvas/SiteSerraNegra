@@ -17,7 +17,7 @@ export default function Home({ seo = true }) {
           <title>Serra Negra Materiais para Construção Alterosa - MG</title>
           <meta
             name="description"
-            content="A Serra Negra Materiais para Construção é referência em materiais para construção em Alterosa-MG, oferecendo produtos de qualidade, ótimo atendimento, preços justos e entrega rápida."
+            content="A Serra Negra Materiais para Construção é referência em materiais para construção em Alterosa-MG, oferecendo produtos de qualidade, ótimo atendimento"
           />
           <link rel="canonical" href="https://serranegramc.com.br/" />
           <meta
