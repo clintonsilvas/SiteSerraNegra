@@ -9,15 +9,15 @@ import CallArea from "../components/CallArea";
 import ContactArea from "../components/ContactArea";
 import { Helmet } from "react-helmet-async";
 
-export default function Home({ seo = false }) {
+export default function Home({ seo = true }) {
   return (
     <>
       {seo && (
         <Helmet>
-          <title>Serra Negra Materiais para Construção</title>
+          <title>Serra Negra Materiais para Construção Alterosa - MG</title>
           <meta
             name="description"
-            content="A Serra Negra Materiais para Construção é referência em materiais para construção em Alterosa-MG, oferecendo produtos de qualidade, ótimo atendimento, preços justos e entrega rápida. Trabalhamos com cimento, areia, tijolos, ferramentas, acabamentos, materiais hidráulicos, elétricos e muito mais para sua obra, reforma ou construção. Atendimento especializado, confiança, variedade de produtos e condições facilitadas!"
+            content="A Serra Negra Materiais para Construção é referência em materiais para construção em Alterosa-MG, oferecendo produtos de qualidade, ótimo atendimento, preços justos e entrega rápida."
           />
           <link rel="canonical" href="https://serranegramc.com.br/" />
           <meta
