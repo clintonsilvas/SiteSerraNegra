@@ -48,7 +48,7 @@ export default function ContactArea({ seo = false }) {
               <p>
                 <span className="contact-tile">Envie um email:</span>{" "}
                 <a href="mailto:serranegramc@gmail.com">
-                  serranegramc@redenets.com.br
+                  serranegramc@gmail.com
                 </a>
               </p>
             </div>
