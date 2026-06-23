@@ -47,7 +47,7 @@ export default function ContactArea({ seo = false }) {
               <i className="fas fa-envelope"></i>
               <p>
                 <span className="contact-tile">Envie um email:</span>{" "}
-                <a href="mailto:serranegramc@redenets.com.br">
+                <a href="mailto:serranegramc@gmail.com">
                   serranegramc@redenets.com.br
                 </a>
               </p>
