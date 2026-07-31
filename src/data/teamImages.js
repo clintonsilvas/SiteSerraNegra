@@ -18,6 +18,6 @@ export const teamMembers = [
   { nome: "Clinton Nogueira", cargo: "Auxiliar de Escritório", img: clinton, fone:"35998779281" },
   { nome: "Simone Beijo", cargo: "Secretária", img: simone, fone: "35997057737" },
   { nome: "Marcelo Moreira", cargo: "Engenheiro", img: marcelomoreira, fone:"35998529266" },  
-  { nome: "Caio Gonçalves", cargo: "Vendedor", img: marcelomoreira, fone:"35998834094" },
-  { nome: "Pablo Henrique", cargo: "Vendedor", img: marcelomoreira, fone:"35999186261" },
+  { nome: "Caio Gonçalves", cargo: "Vendedor", img: caio, fone:"35998834094" },
+  { nome: "Pablo Henrique", cargo: "Vendedor", img: pablo, fone:"35999186261" },
 ];
