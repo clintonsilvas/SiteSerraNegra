@@ -1,8 +1,157 @@
-#logo {
-  width: 75px;
+/* Container da Navbar Flutuante */
+.custom-navbar {
+  /* Espaçamento das margens para flutuar */
+  margin: 15px auto 0 auto;
+  width: 92%;
+  max-width: 1200px;
+  
+  /* Arredondamento e visual claro */
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  /* Borda sutil e sombreamento suave */
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 20px;
 }
 
 #nav-container {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+/* Logo e Identidade */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+#logo {
+  width: 45px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover #logo {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.brand-text {
+  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+.brand-text strong {
+  color: #27ae60;
+}
+
+/* Links de Navegação */
+.custom-navbar .navbar-nav .nav-link,
+.custom-navbar .navbar-nav .nav-link:visited,
+.custom-navbar .navbar-nav .nav-link:focus {
+  color: #4b5563 !important;
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 6px 12px !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link .nav-icon {
+  color: #9ca3af !important;
+  font-size: 0.88rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover e Link Ativo */
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-nav .nav-link.active-link {
+  color: #27ae60 !important;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover .nav-icon,
+.custom-navbar .navbar-nav .nav-link.active-link .nav-icon {
+  color: #27ae60 !important;
+  transform: translateY(-2px);
+}
+
+/* Indicador inferior animado */
+.custom-navbar .navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #27ae60;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  transform: translateX(-50%);
+}
+
+.custom-navbar .navbar-nav .nav-link:hover::after,
+.custom-navbar .navbar-nav .nav-link.active-link::after {
+  width: 50%;
+}
+
+/* Botão de Orçamento (WhatsApp) */
+.btn-whatsapp-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #27ae60;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 7px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp-header:hover {
+  background-color: #219150;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(39, 174, 96, 0.35);
+}
+
+/* Ajustes para Telas Menores e Mobile */
+@media (max-width: 991px) {
+  .custom-navbar {
+    width: 95%;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px 16px;
+  }
+
+  #navbar-links {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 16px;
+    margin-top: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f3f4f6;
+  }
+
+  .btn-whatsapp-header {
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .custom-navbar .navbar-nav .nav-link::after {
+    display: none;
+  }
 }

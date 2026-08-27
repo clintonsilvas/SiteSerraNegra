@@ -4,10 +4,10 @@ import About from "../components/About";
 import Services from "../components/Services";
 import DataArea from "../components/DataArea";
 import TeamArea from "../components/TeamArea";
-import NewsArea from "../components/NewsArea";
 import CallArea from "../components/CallArea";
 import ContactArea from "../components/ContactArea";
 import { Helmet } from "react-helmet-async";
+import { FaIndustry } from "react-icons/fa";
 
 export default function Home({ seo = true }) {
   return (
@@ -30,9 +30,18 @@ export default function Home({ seo = true }) {
       <Slider />
       <About />
       <Services />
+      <CallArea 
+        buttonText="Falar com Atendente"
+        phrases={[
+          {
+            text: "Precisa de lajes ou blocos de cimento?",
+            icon: <FaIndustry />,
+            highlight: "Direto da Fábrica"
+          }
+        ]}
+      />
       <DataArea />
-      <TeamArea />
-      <NewsArea />
+      <TeamArea />      
       <CallArea />
       <ContactArea />
     </>

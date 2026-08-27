@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main>
+      <main className="main-container">
         <Routes>
           <Route path="/" element={<Home seo={true} />} />
           <Route path="/sobre" element={<About seo={true} />} />

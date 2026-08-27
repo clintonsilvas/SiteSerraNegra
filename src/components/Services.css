@@ -1,35 +1,143 @@
 #services-area {
-  background-color: #fff;
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Títulos e Subtítulos */
+.services-subtitle {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  margin-bottom: 8px;
+  background: rgba(39, 174, 96, 0.1);
+  padding: 4px 14px;
+  border-radius: 30px;
 }
 
 .main-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #00a447;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
 }
 
-.service-box {
-  border-radius: 15px;
-  background: #f8f8f8;
-  transition: 0.3s;
+.services-description {
+  max-width: 600px;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.service-box:hover {
-  background: #00a447;
-  color: #fff;
+/* Cards Modernos de Serviço */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
 }
 
-.service-icon {
-  font-size: 3rem;
-  color: #00a447;
-  transition: 0.3s;
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(39, 174, 96, 0.4);
+  box-shadow: 0 16px 32px rgba(39, 174, 96, 0.1);
 }
 
-.service-box:hover .service-icon {
-  color: #fff;
+/* Cabeçalho do Card (Ícone + Tag) */
+.service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.service-box h4 {
-  margin-top: 10px;
+.service-icon-wrapper {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+  background: #27ae60;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.service-tag {
+  font-size: 0.75rem;
   font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Corpo do Card */
+.service-body h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.service-body p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+/* Botão de Cotação Rápida no Footer do Card */
+.service-footer {
+  margin-top: auto;
+}
+
+.service-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  color: #334155 !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.service-card:hover .service-btn {
+  background-color: #27ae60;
+  color: #ffffff !important;
+  border-color: #27ae60;
+}
+
+.service-btn:hover {
+  opacity: 0.92;
+}
+
+/* Ajustes no Mobile */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 22px 18px;
+  }
 }

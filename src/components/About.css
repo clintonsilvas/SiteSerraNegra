@@ -1,28 +1,131 @@
 #about-area {
-  background-color: #f9f9f9;
+  background-color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-subtitle {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  margin-bottom: 8px;
+  background: rgba(39, 174, 96, 0.1);
+  padding: 4px 14px;
+  border-radius: 30px;
 }
 
 .main-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #00a447;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.5px;
 }
 
-.about-title {
+/* Container da Imagem com Efeito Flutuante */
+.about-img-container {
+  position: relative;
+  padding: 20px 0;
+}
+
+.about-main-img {
+  border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+  max-height: 440px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Badge de Experiência Flutuante sobre a Imagem */
+.experience-badge {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  background: #27ae60;
+  color: #ffffff;
+  padding: 16px 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(39, 174, 96, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #ffffff;
+}
+
+.exp-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.exp-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* Textos descritivos */
+.about-heading {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: #334155;
+  line-height: 1.35;
+  margin-bottom: 16px;
 }
 
-#about-list li {
+.about-text {
+  color: #64748b;
   font-size: 1rem;
-  margin-bottom: 10px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Cards de Diferenciais (Grid moderno substituindo a lista vertical simples) */
+.about-feature-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-2px);
+  border-color: #27ae60;
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.08);
 }
 
 .about-icon {
-  color: #00a447;
-  margin-right: 10px;
+  color: #27ae60;
   font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.about-feature-card span {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+  .experience-badge {
+    bottom: 10px;
+    right: 10px;
+    padding: 12px 16px;
+  }
+  .exp-number {
+    font-size: 1.3rem;
+  }
 }

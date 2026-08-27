@@ -1,37 +1,171 @@
 #footer-area {
+  background-color: #0f172a; /* Dark elegante */
+  color: #94a3b8;
   font-size: 0.9rem;
+  border-top: 1px solid #1e293b;
 }
 
-#footer-area h5 {
-  margin-bottom: 1rem;
+/* Marca / Logo */
+.footer-logo {
+  height: 80px;
+  width: auto;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.footer-subtitle {
+  color: #27ae60;
+  font-size: 0.8rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
 }
 
-#footer-area a {
-  color: #bbb;
+.footer-text {
+  line-height: 1.6;
+  font-size: 0.88rem;
+}
+
+.footer-cnpj {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+.text-success-custom {
+  color: #27ae60;
+}
+
+/* Headings */
+.footer-heading {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Lista de Atendimento */
+.footer-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.88rem;
+}
+
+.info-icon {
+  color: #27ae60;
+  font-size: 1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Links Rápidos */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #94a3b8;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
 }
 
-#footer-area a:hover {
-  color: #00a447;
+.link-arrow {
+  font-size: 0.65rem;
+  color: #27ae60;
+  transition: transform 0.25s ease;
 }
 
-.social-icons a {
-  margin-right: 15px;
-  color: #bbb;
-  transition: color 0.3s;
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
 }
 
-.social-icons a:hover {
-  color: #00a447;
-}
-.list-unstyled a{
-  font-size: 1.2  em;
+.footer-links a:hover .link-arrow {
+  transform: translateX(2px);
 }
 
-@media (max-width: 576px) {
-  #footer-area .text-md-left {
-    text-align: center !important;
+/* Botões de Redes Sociais */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .social-icons {
+    justify-content: flex-start;
   }
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #27ae60;
+  color: #ffffff;
+  border-color: #27ae60;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Divisor & Footer Bottom */
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.developer-link {
+  color: #27ae60 !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.developer-link:hover {
+  color: #2ecc71 !important;
+  text-decoration: underline;
+}
+/* Texto de Copyright e Créditos */
+.copyright-text {
+  color: #94a3b8 !important; /* Cinza claro/médio visível e legível no escuro */
+}
+
+.developer-link {
+  color: #27ae60 !important; /* Verde em destaque */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.developer-link:hover {
+  color: #2ecc71 !important; /* Verde mais claro ao passar o mouse */
+  text-decoration: underline;
 }

@@ -1,9 +1,141 @@
 #call-area {
-  background-color: #00a447;
+  background: #ffffff;
+  position: relative;
 }
 
-#call-area p {
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+/* Banner Principal com Gradiente Verde Moderno */
+.call-banner-wrapper {
+  background: linear-gradient(135deg, #1e7e44 0%, #27ae60 50%, #2ecc71 100%);
+  border-radius: 20px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 10px 25px rgba(39, 174, 96, 0.25);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Elemento Decorativo Sutil ao Fundo */
+.call-banner-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Conteúdo da Esquerda */
+.call-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.call-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.call-content.fade-out {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* Badge do Ícone */
+.call-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* Textos */
+.call-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-highlight {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2px;
+}
+
+.call-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Botão do WhatsApp */
+.call-action {
+  flex-shrink: 0;
+}
+
+.call-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #1e7e44 !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-icon {
+  font-size: 1.2rem;
+  color: #25d366;
+}
+
+.call-whatsapp-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  background-color: #f8fafc;
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+  .call-banner-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .call-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .call-action {
+    width: 100%;
+  }
+
+  .call-whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

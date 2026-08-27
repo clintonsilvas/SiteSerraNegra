@@ -1,104 +1,160 @@
 import React from "react";
 import {
-  FaFacebook,
+  FaFacebookF,
   FaInstagram,
   FaWhatsapp,
-  FaLinkedin,
+  FaLinkedinIn,
+  FaMapMarkerAlt,
+  FaClock,
+  FaBuilding,
+  FaChevronRight
 } from "react-icons/fa";
 import "./Footer.css";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer id="footer-area" className="bg-dark text-light pt-5 pb-3">
+    <footer id="footer-area" className="pt-5 pb-3">
       <div className="container">
-        <div className="row text-center text-md-left">
-          <div className="col-md-4 mb-4">
-            <h4>Serra Negra Materiais</h4>
-            <p>CNPJ: 17.267.006/0001-22</p>
-            <p>Centro de Alterosa - MG</p>
-            <p>Atendimento:</p>
-            <p>De segunda a sexta: 06h30 às 17h30</p>
-            <p>Sábados: 06h30 às 11h30</p>
+        <div className="row g-4">
+          {/* Coluna 1: Sobre & Institucional */}
+          <div className="col-lg-4 col-md-6 text-center text-md-start">
+            <div className="footer-brand mb-3">
+              <img
+                src="/logo.svg"
+                alt="Serra Negra Materiais"
+                className="footer-logo mb-2"
+              />
+              <h4 className="footer-title">Serra Negra</h4>
+              <p className="footer-subtitle">Materiais para Construção</p>
+            </div>
+            <p className="footer-text">
+              Desde 1990 oferecendo a maior variedade em materiais brutos, artefatos de cimento e acabamento para Alterosa e região.
+            </p>
+            <div className="footer-cnpj">
+              <FaBuilding className="me-2 text-success-custom" />
+              <span>CNPJ: 17.267.006/0001-22</span>
+            </div>
           </div>
 
-          <div className="col-md-4 mb-4">
-            <h5>Links Rápidos</h5>
-            <ul className="list-unstyled">
+          {/* Coluna 2: Atendimento e Endereço */}
+          <div className="col-lg-3 col-md-6 text-center text-md-start">
+            <h5 className="footer-heading">Atendimento & Local</h5>
+            <ul className="footer-info-list list-unstyled">
               <li>
-                <a href="/sobre">Sobre Nós</a>
+                <FaMapMarkerAlt className="info-icon" />
+                <span>Centro de Alterosa - MG</span>
               </li>
               <li>
-                <a href="/servicos">Produtos</a>
+                <FaClock className="info-icon" />
+                <div>
+                  <strong>Segunda a Sexta:</strong>
+                  <br />
+                  06h30 às 17h30
+                </div>
               </li>
               <li>
-                <a href="/dados">Dados</a>
-              </li>
-              <li>
-                <a href="/time">Time</a>
-              </li>
-              <li>
-                <a href="/contato">Onde Estamos</a>
-              </li>
-              <li>
-                <a href="/contato">Orçamento</a>
+                <FaClock className="info-icon" />
+                <div>
+                  <strong>Sábados:</strong>
+                  <br />
+                  06h30 às 11h30
+                </div>
               </li>
             </ul>
           </div>
 
-          <div className="col-md-4 mb-4">
-            <h5>Redes Sociais</h5>
+          {/* Coluna 3: Links Rápidos */}
+          <div className="col-lg-2 col-md-6 text-center text-md-start">
+            <h5 className="footer-heading">Navegação</h5>
+            <ul className="footer-links list-unstyled">
+              {[
+                { name: "Sobre Nós", path: "/sobre" },
+                { name: "Produtos", path: "/servicos" },
+                { name: "Dados", path: "/dados" },
+                { name: "Time", path: "/time" },
+                { name: "Onde Estamos", path: "/contato" },
+                { name: "Orçamento", path: "/contato" }
+              ].map((link, idx) => (
+                <li key={idx}>
+                  <a href={link.path}>
+                    <FaChevronRight className="link-arrow" /> {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Coluna 4: Redes Sociais */}
+          <div className="col-lg-3 col-md-6 text-center text-md-start">
+            <h5 className="footer-heading">Conecte-se Conosco</h5>
+            <p className="footer-text small mb-3">
+              Acompanhe nossas novidades, ofertas e lançamentos nas redes sociais.
+            </p>
             <div className="social-icons">
               <a
                 href="https://www.facebook.com/Serra.negra.mc1990/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook da Serra Negra Materiais"
+                aria-label="Facebook"
+                className="social-btn facebook"
               >
-                <FaFacebook size={24} />
+                <FaFacebookF />
               </a>
               <a
                 href="https://www.instagram.com/serranegra.mc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram da Serra Negra Materiais"
+                aria-label="Instagram"
+                className="social-btn instagram"
               >
-                <FaInstagram size={24} />
+                <FaInstagram />
               </a>
               <a
                 href="https://wa.me/553532941140"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Whatsapp da Serra Negra Materiais"
+                aria-label="Whatsapp"
+                className="social-btn whatsapp"
               >
-                <FaWhatsapp size={24} />
+                <FaWhatsapp />
               </a>
               <a
                 href="https://www.linkedin.com/company/serra-negra-materiais-para-constru%C3%A7%C3%A3o-ltda/about/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn da Serra Negra Materiais"
+                aria-label="LinkedIn"
+                className="social-btn linkedin"
               >
-                <FaLinkedin size={24} />
+                <FaLinkedinIn />
               </a>
             </div>
           </div>
         </div>
 
-        <hr className="border-secondary" />
+        <hr className="footer-divider my-4" />
 
-        <div className="text-center">
-          <p className="mb-0">
-            Desenvolvido por{" "}
-            <a
-              href="https://github.com/clintonsilvas"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-light fw-bold"
-            >
-              Clinton Nogueira
-            </a>{" "}
-            &copy; {new Date().getFullYear()}
-          </p>
+        {/* Créditos Finais */}
+        <div className="row align-items-center copyright-row">
+          <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <p className="mb-0 copyright-text small">
+              &copy; {year} Serra Negra Materiais. Todos os direitos reservados.
+            </p>
+          </div>
+          <div className="col-md-6 text-center text-md-end">
+            <p className="mb-0 copyright-text small">
+              Desenvolvido por{" "}
+              <a
+                href="https://github.com/clintonsilvas"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="developer-link fw-bold"
+              >
+                Clinton Nogueira
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
