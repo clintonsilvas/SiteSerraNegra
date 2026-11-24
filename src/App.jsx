@@ -9,6 +9,7 @@ import Services from "./components/Services";
 import Contact from "./components/ContactArea";
 import DataArea from "./components/DataArea";
 import TeamArea from "./components/TeamArea";
+import EmailPage from "./components/EmailPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/dados" element={<DataArea seo={true} />} />
           <Route path="/contato" element={<Contact seo={true} />} />
           <Route path="/time" element={<TeamArea seo={true} />} />
+          <Route path="/email" element={<EmailPage />} />
         </Routes>
       </main>
       <Footer />
