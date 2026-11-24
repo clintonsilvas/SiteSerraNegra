@@ -1,0 +1,246 @@
+#email-area {
+  background-color: #f8fafc;
+  position: relative;
+}
+
+/* Subtítulo e Título (mesmo padrão do ContactArea) */
+.email-subtitle {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  margin-bottom: 8px;
+  background: rgba(39, 174, 96, 0.1);
+  padding: 4px 14px;
+  border-radius: 30px;
+}
+
+#email-area .main-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+.email-description {
+  max-width: 580px;
+  color: #64748b;
+  font-size: 0.98rem;
+}
+
+/* Cards da esquerda */
+.email-info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.email-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(39, 174, 96, 0.4);
+  box-shadow: 0 10px 20px rgba(39, 174, 96, 0.08);
+}
+
+.email-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.email-details h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.email-link {
+  color: #27ae60;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s ease;
+}
+
+.email-link:hover {
+  color: #1e7e44;
+  text-decoration: underline;
+}
+
+.email-text {
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+/* Caixa do formulário */
+.form-wrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#email-area .form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+#email-area .form-control,
+#email-area .form-select {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: #1e293b;
+  background-color: #f8fafc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+#email-area .form-control:focus,
+#email-area .form-select:focus {
+  border-color: #27ae60;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.12);
+}
+
+#email-area textarea.form-control {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Ícone dentro do input */
+.input-icon-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.input-icon-group .form-control {
+  padding-left: 38px !important;
+}
+
+.contador {
+  display: block;
+  text-align: right;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+/* Honeypot */
+.campo-oculto {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Botão (mesmo estilo do "Como Chegar") */
+.btn-enviar {
+  display: inline-flex;
+  align-items: center;
+  background-color: #27ae60;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover:not(:disabled) {
+  background-color: #1e7e44;
+  transform: translateY(-1px);
+}
+
+.btn-enviar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Feedback */
+.form-feedback {
+  height: 100%;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-feedback .feedback-icon {
+  font-size: 3.2rem;
+  color: #27ae60;
+  margin-bottom: 16px;
+}
+
+.form-feedback h4 {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.form-feedback p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.form-feedback-inline {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+}
+
+.form-feedback-inline.erro {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+/* Responsivo */
+@media (max-width: 991px) {
+  #email-area .main-title {
+    font-size: 1.9rem;
+  }
+  .form-wrapper {
+    padding: 22px;
+  }
+}

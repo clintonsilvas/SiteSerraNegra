@@ -6,6 +6,7 @@ import DataArea from "../components/DataArea";
 import TeamArea from "../components/TeamArea";
 import CallArea from "../components/CallArea";
 import ContactArea from "../components/ContactArea";
+import Email from "../components/EmailPage";
 import { Helmet } from "react-helmet-async";
 import { FaIndustry } from "react-icons/fa";
 
@@ -30,19 +31,20 @@ export default function Home({ seo = true }) {
       <Slider />
       <About />
       <Services />
-      <CallArea 
+      <CallArea
         buttonText="Falar com Atendente"
         phrases={[
           {
             text: "Precisa de lajes ou blocos de cimento?",
             icon: <FaIndustry />,
-            highlight: "Direto da Fábrica"
-          }
+            highlight: "Direto da Fábrica",
+          },
         ]}
       />
       <DataArea />
-      <TeamArea />      
+      <TeamArea />
       <CallArea />
+      <Email />
       <ContactArea />
     </>
   );
